@@ -4,7 +4,8 @@ import pandas as pd
 import joblib
 
 # Load the model committed by the pipeline (sits next to this file)
-model_path = os.path.join(os.path.dirname(__file__), "tourism_package_pred.joblib")
+#model_path = os.path.join(os.path.dirname(__file__), "tourism_package_pred.joblib")
+model_path = os.path.join(os.path.dirname(tourism_project), "tourism_package_pred.joblib")
 model = joblib.load(model_path)
 
 # Streamlit UI for Customer Churn Prediction
