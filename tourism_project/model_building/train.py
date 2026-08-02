@@ -21,11 +21,16 @@ ytrain = pd.read_csv("ytrain.csv").squeeze()
 ytest  = pd.read_csv("ytest.csv").squeeze()
 
 # List of numerical features in the dataset
-numeric_features=X.select_dtypes(include=['int64', 'float64']).columns
-
+#numeric_features=X.select_dtypes(include=['int64', 'float64']).columns
+numeric_features=['Age', 'CityTier', 'DurationOfPitch', 'NumberOfPersonVisiting',
+       'NumberOfFollowups', 'PreferredPropertyStar', 'NumberOfTrips',
+       'Passport', 'PitchSatisfactionScore', 'OwnCar',
+       'NumberOfChildrenVisiting', 'MonthlyIncome']
 # List of categorical features in the dataset
-categorical_features=X.select_dtypes(include=['object']).columns
-
+#categorical_features=X.select_dtypes(include=['object']).columns
+categorical_features=['TypeofContact', 'Occupation', 'Gender', 'ProductPitched',
+       'MaritalStatus', 'Designation']
+       
 # Set the class weight to handle class imbalance
 class_weight = ytrain.value_counts()[0] / ytrain.value_counts()[1]
 class_weight
