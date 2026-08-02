@@ -23,7 +23,7 @@ PreferredPropertyStar = st.selectbox("Preferred hotel rating by the customer:", 
 MaritalStatus = st.selectbox("Marital status?", ['Single', 'Divorced', 'Married', 'Unmarried'])
 NumberOfTrips = st.number_input("NumberOfTrips(Number of trips a customer takes annually)", min_value=1,max_value=22, value=5)
 Passport = st.selectbox("Passport(Does customer have passport 0:No, 1:Yes?)", ["Yes","No"])
-OwnCar = st.number_input("OwnCar(Does customer have owncar  (0: No, 1: Yes)?)", ["Yes","No"])
+OwnCar = st.number_input("OwnCar(Does customer have owncar?)", ["Yes","No"])
 NumberOfChildrenVisiting = st.number_input("NumberOfChildrenVisiting(Number of children below 5 yrs visiting)", min_value=1,max_value=3, value=1)
 Designation = st.selectbox("Designation(customer's Designation)", [['Manager', 'Executive', 'Senior Manager', 'AVP', 'VP']])
 MonthlyIncome = st.number_input("MonthlyIncome(customer's Monthly Income)", min_value=1000,max_value=100000,value=1000)
