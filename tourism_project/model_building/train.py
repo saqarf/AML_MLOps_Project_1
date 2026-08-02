@@ -102,7 +102,7 @@ with mlflow.start_run():
 
     # Save next to app.py so the Streamlit app can load it directly, and log
     # it as an MLflow artifact for traceability
-    model_path = "tourism_project/deployment/tourism_package_pred.joblib"
+    model_path = "tourism_project/deployment/tourism.joblib"
     joblib.dump(best_model, model_path)
     mlflow.log_artifact(model_path, artifact_path="model")
     print(f"Model saved to {model_path}")
